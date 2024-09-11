@@ -21,14 +21,14 @@ public class AssAdministrativo extends Assistente{
 //METODOS
    @Override
    public String toString() {
-       double salarioComBonus = getSalarioBase() * 1.3 ;
+       double salarioComBonus = getSalarioBase() * 0.3 ;
        double salarioComBonusAux = 0;
        
        if ("noite".equals(turno)) {
-            salarioComBonusAux = getSalarioBase() * 1.15;           
+            salarioComBonusAux = getSalarioBase() * 0.15;           
         }
     
-       return "Nome: " + super.getNome() + " Matricula: " + super.getMatricula() + " Salario: " + (getSalarioBase() +salarioComBonusAux + salarioComBonus);
+       return "Nome: " + super.getNome() + " Matricula: " + super.getMatricula() + " Salario: " + ((getSalarioBase()+salarioComBonusAux) + salarioComBonus);
    }
 
     

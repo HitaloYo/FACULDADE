@@ -10,4 +10,8 @@ public class CamaroteSuperior extends Vip{
     public String exibeValor() {     
         return "O valor do Camarote superior é: " + (getValor() + getAdicional());
     }
+    public String exibeLocal(){
+        return "Localização: " + getLocal();       
+    }
+
 }

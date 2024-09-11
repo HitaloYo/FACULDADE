@@ -2,6 +2,8 @@ package Atividade1.Q4;
 
 import Atividade1.Q1.*;
 import Atividade1.Q2.*;
+import Atividade1.Q3.*;
+
 import java.util.Scanner;
 
 
@@ -26,7 +28,7 @@ public class Main {
             
             if (tipoIngresso == 1) {
                 ingresso = new Normal(100.00);
-                ((Normal) ingresso).exibeValor();
+                ingresso.exibeValor();
                 System.out.println(ingresso.exibeValor());
             } else if (tipoIngresso == 2) {
                 System.out.println("Digite 1 para Camarote Superior ou 2 para Camarote Inferior:");
@@ -49,11 +51,22 @@ public class Main {
                 return;
             }
 
+
+            System.out.println("Escolha um Imovel \nVelho - 1\nNovo - 2\n");
+            int tipo = scanner.nextInt(); 
+            if (tipo == 1) {
+                Velho imoVelho = new Velho("Centro sul", 5000, 1500);
+                System.out.println(imoVelho.toString());
+            
+            } else if (tipo == 2) {
+                Novo imoNovo = new Novo("Centro norte", 5000, 1500);
+                System.out.println(imoNovo.toString());
+            
+        }
+          
         } catch (Exception e) {
             System.err.println("Argumento invalido");
         }
-
-
 
 
 

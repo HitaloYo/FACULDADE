@@ -8,9 +8,9 @@ public class AssTecnico extends Assistente {
  //METODOs  
     @Override
     public String toString() {
-        double salarioComBonus = getSalarioBase() * 1.3;
-        double salarioComBonusAux = getSalarioBase() * 1.05;
-        return "Nome: " + super.getNome() + " Matricula: " + super.getMatricula() + " Salario: " + (getSalarioBase() + salarioComBonus + salarioComBonusAux);
+        double salarioComBonus = getSalarioBase() * 0.3;
+        double salarioComBonusAux = getSalarioBase() * 0.05;
+        return "Nome: " + super.getNome() + " Matricula: " + super.getMatricula() + " Salario: " + ((getSalarioBase() + salarioComBonus) + salarioComBonusAux);
     }
      
 }

@@ -6,13 +6,11 @@ public class Gerente extends Funcionarios{
         super(nome, matricula, salarioBase);
         
     }
-
-
 //METODO DE EXIBIÇÃO DE DADOS
     @Override
     public String toString() {
-        double salarioComBonus = super.getSalarioBase + (super.getSalarioBase() * 1.5);
-        return "Nome: " + super.getNome() + " Matricula: " + super.getMatricula() + " Salario: " + salarioComBonus;
+        double salarioComBonus = super.getSalarioBase() * 0.5;
+        return "Nome: " + super.getNome() + " Matricula: " + super.getMatricula() + " Salario: " +(super.getSalarioBase() + salarioComBonus);
     }
 
 }

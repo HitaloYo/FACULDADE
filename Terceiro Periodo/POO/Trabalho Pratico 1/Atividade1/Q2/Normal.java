@@ -8,6 +8,6 @@ public class Normal extends Ingresso {
 //METODOS
     @Override
     public String exibeValor() {
-        return "O valor do total do ingresso normal é: " + super.getValor();
+        return "O valor do total do ingresso normal é: " + getValor();
     }
 }
