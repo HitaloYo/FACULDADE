@@ -86,7 +86,7 @@ public class ContatoDAO {
         }
 }
     public void atualizaContato(Long id, String nome, String email, String endereco, String telefone) throws SQLException {
-    String sql = "UPDATE contatos SET nome = ?, email = ?, endereco = ?, telefone = ? WHERE id = ?";
+    String sql = "UPDATE contato SET nome = ?, email = ?, endereco = ?, telefone = ? WHERE id = ?";
     try (PreparedStatement stmt = connection.prepareStatement(sql)) {
         stmt.setString(1, nome);
         stmt.setString(2, email);

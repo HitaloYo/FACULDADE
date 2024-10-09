@@ -65,6 +65,11 @@ public class TestaLista extends javax.swing.JFrame {
         });
 
         jButton2.setText("Editar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jBtnAtualizar.setText("Pesquisar");
         jBtnAtualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -181,6 +186,26 @@ public class TestaLista extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Erro ao deletar contato: " + e.getMessage());
     }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+            int linhaSelecionada = jTcontatos.getSelectedRow();
+
+    if (linhaSelecionada == -1) {
+        JOptionPane.showMessageDialog(null, "Por favor, selecione um contato para editar.");
+        return;
+    }
+
+    // Obter os dados da linha selecionada
+    Long id = Long.parseLong(jTcontatos.getValueAt(linhaSelecionada, 0).toString());
+    String nome = (String) jTcontatos.getValueAt(linhaSelecionada, 1);
+    String email = (String) jTcontatos.getValueAt(linhaSelecionada, 2);
+    String endereco = (String) jTcontatos.getValueAt(linhaSelecionada, 3);
+    String telefone = (String) jTcontatos.getValueAt(linhaSelecionada, 4);
+
+    // Abrir a janela de edição passando os dados do contato
+   System.out.print(id);
+     new TelaEdit(id, nome,email,endereco,telefone).setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

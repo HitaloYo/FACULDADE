@@ -200,6 +200,11 @@ public class TelaInsertComTable extends javax.swing.JFrame {
                 String endereco = jTendereco.getText();
                 String tel = jTtelefone.getText();
                 
+                jTnome.setText("");
+                jTemail.setText("");
+                jTendereco.setText("");
+                jTtelefone.setText("");
+                
                 Contato contato = new Contato();
                 contato.setNome(nome);
                 contato.setEmail(email);
