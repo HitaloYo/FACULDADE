@@ -10,7 +10,7 @@ public class ConnectionFactory {
         // URL de conexão com o MySQL
         String mysqlUrl = "jdbc:mysql://localhost:3306/contatos"; // ajuste o nome do banco de dados
         String username = "root"; // substitua pelo seu usuário do MySQL
-        String password = "Hitalo1423*"; // substitua pela sua senha do MySQL
+        String password = ""; // substitua pela sua senha do MySQL
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // Classe do driver do MySQL
